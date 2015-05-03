@@ -1,7 +1,7 @@
 var output = document.getElementById("output-canvas");
 	var output_context = output.getContext("2d");
 	sample_image = new Image();
-	sample_image.src = 'img/sample.png';
+	sample_image.src = 'img/sample-min.png';
 	sample_image.onload = function(){
 		output_context.drawImage(sample_image, 0, 0, output.width, output.height);
 	}				

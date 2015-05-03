@@ -77,7 +77,7 @@ var output = document.getElementById("output-canvas");
 
 	function applyFilter(){
 		var pixels = getInputPixels();
-		worker.postMessage(["process", pixels.data]);
+		//worker.postMessage(["process", pixels.data]);
 		process_pixels(pixels);
 		output_context.putImageData(pixels, 0, 0);
 	}

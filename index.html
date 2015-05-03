@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Load the Paper.js library -->
+	<script type="text/javascript" src="/lib/paper/dist/paper-full.js"></script>
+	<!-- Define inlined JavaScript -->
+	<script type="text/javascript">
+
+		function pos_to_hs(x, y){
+			var saturation = Math.sqrt(Math.pow(x, 2)+Math.pow(y, 2));
+			var hue = Math.atan2(x, y)/(2*Math.PI);
+			return {
+				hue: hue,
+				saturation: saturation,
+			}
+		}
+
+		function draw_hue_circle(center, radius, ctx){
+			var s= 0;
+			var color;
+			for(var i=-radius; i<=radius; i++){
+				for(var j=-radius; j<=radius; j++){
+					var location = {x: center.x+i, y:center.y+j}
+					var hs = pos_to_hs(i/radius, j/radius)
+					if(hs.saturation<=1){
+						ctx.fillStyle = "hsl(" + hs.hue*360 + ", " + hs.saturation*100 + "%, 50%)";
+					}else{
+						ctx.fillStyle = "white";
+					}
+					ctx.fillRect(location.x, location.y, 1, 1)
+					s++;
+				}
+			}
+		}
+
+		function getGamutPos(x_norm, y_norm){
+			var point = new Point((width*(x_norm+1))/2, (width*(y_norm+1))/2);
+			if(mask.contains(point)){
+				return {x:x_norm, y:y_norm};
+			}else{
+				var nearest = mask.getNearestPoint(point);
+				return {x:2*nearest.x/width -1, y:2*nearest.y/width -1};
+			}
+		}
+
+		function normalize(value){
+			return value/(width/2)-1;
+		}
+
+		function denormalize(value){
+			return (value+1)*(width/2);
+		}
+
+
+		paper.install(window);
+		window.onload = function() {
+
+			var canvas = document.getElementById("circle");
+			window.width = canvas.width;
+
+			var context = canvas.getContext("2d");
+			draw_hue_circle({x:width/2, y:width/2}, width/2, context);
+
+			Path.prototype.findNearestSegment = function(point){
+				var nearest = null;
+				var min_dist = Infinity;
+				for(var i in this.segments){
+					var dist = this.segments[i]._point.getDistance(point);
+					if(dist < min_dist){
+						nearest = this.segments[i]._point;
+						var min_dist = dist;
+					}
+				}
+				return nearest;
+			}
+
+			paper.setup('circle-overlay');
+			var tool = new Tool();
+			var mask = new Path();
+			window.mask = mask;
+			mask.strokeColor = "black";
+			mask.fillColor = new Color(1, 0, 0);
+			mask.strokeWidth = 5;
+			mask.selected = true;
+			mask.clockwise = false;
+			mask.add(new Point(60, 100));
+			mask.add(new Point(350, 100));
+			mask.add(new Point(200, 350));
+			mask.closePath();
+			mask.closed=true;
+
+			var chosen_segment = null;
+
+			tool.onMouseDown = function(event) {
+				var nearest = mask.findNearestSegment(event.point);
+				var distance = nearest.getDistance(event.point);
+				if(distance < 15){
+					chosen_segment = nearest;
+				}else{
+					mask.add(event.point);
+					chosen_segment = mask.findNearestSegment(event.point);
+					mask.clockwise = false;
+					if(mask.area < 0){
+						mask.reverse();
+					}
+					if(mask.segments.length==3){
+						mask.closePath();
+					}					
+				}
+			}
+
+			tool.onMouseDrag = function(event) {
+				chosen_segment.x = event.point.x;
+				chosen_segment.y = event.point.y;
+				if(mask.area < 0){
+					mask.reverse();
+				}
+			}
+
+			tool.onMouseUp = function(event){
+				chosen_segment = null;
+			}
+
+
+			var dot = new Path.Circle(new Point(0,0), 3);
+			dot.fillColor = "red";	
+
+			tool.onMouseMove = function(event){
+				var new_pos = getGamutPos(normalize(event.point.x), normalize(event.point.y));
+				dot.position = new Point(denormalize(new_pos.x), denormalize(new_pos.y));
+				dot.bringToFront();
+			}
+
+			var overlay = new CompoundPath({
+				children:[
+				new Path.Rectangle(new Point(0, 0), canvas.width),
+				mask,
+				],
+				fillColor: "black",
+				opacity: 0.5,
+				clockwise: false
+			})
+
+			window.worker = new Worker("/worker3.js");
+
+			worker.onmessage = function(e) {
+			  console.log(e);
+			  console.log('Message received from worker');
+			}
+		}	
+	</script>
+	<style>
+		.circle-container{
+			position:absolute;	
+		}
+
+		#circle-overlay{
+			position:absolute;
+			top:0;
+			left:0;
+		}
+	</style>
+</head>
+<body>
+	<div class="circle-container">
+		<canvas id="circle" width="400" height="400"></canvas>
+		<canvas id="circle-overlay" width="400" height="400"></canvas>
+		<button onClick="applyFilter()">Zastosuj</button>
+	</div>
+	<div class="output-wrapper">
+		<canvas id="output-canvas" width="200" height="200" style="margin-left:400px;"></canvas>
+	</div>
+</body>
+<script src="main.js"></script>
+</html>

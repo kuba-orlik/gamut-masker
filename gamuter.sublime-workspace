@@ -1,0 +1,422 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 342.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"map",
+				"View: Toggle Minimap"
+			],
+			[
+				"colorcode",
+				"Toggle Colorcode on this view"
+			],
+			[
+				"color ",
+				"Toggle Colorcode on this view"
+			],
+			[
+				"toggle",
+				"View: Toggle Menu"
+			],
+			[
+				"toggle menu",
+				"View: Toggle Menu"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/kuba/Projekty/gamuter"
+	],
+	"file_history":
+	[
+		"/home/kuba/Projekty/Sealious-dev/Sealious/node_modules/winston/examples/color-message.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/lib/main.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/package.json",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/lib/chip-types/resource-manager.js",
+		"/home/kuba/Projekty/Sealious-dev/sealious-base-chips/define/field_type.text.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/lib/dispatchers/dispatcher-distributed.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/lib/chip-types/resource-type.js",
+		"/home/kuba/Projekty/Sealious-dev/sealious-base-chips/define/field_type.reference.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/node_modules/winston/node_modules/pkginfo/examples/object-argument.js",
+		"/home/kuba/Projekty/Sealious-dev/sealious-base-chips/define/field_type.color.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/main.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/lib/chip-types/resource-representation.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/lib/chip-types/chip-manager.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/lib/chip-types/chip.js",
+		"/home/kuba/Projekty/Sealious-dev/sealious-base-chips/define/datastore.mongo.js",
+		"/home/kuba/Projekty/Sealious-dev/sealious-base-chips/use/channel.www_server.js",
+		"/home/kuba/Projekty/Sealious-dev/sealious-base-chips/define/channel.www_server.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/lib/core.js",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/lib/chip-types/field-type.js",
+		"/home/kuba/Projekty/Sealious-dev/sealious-example-app/public/index.html",
+		"/home/kuba/Projekty/Sealious-dev/Sealious/node_modules/mocha/index.js",
+		"/home/kuba/Projekty/dev-setup.sh",
+		"/home/kuba/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings",
+		"/home/kuba/.themes/Numix Daily2/gtk-2.0/gtkrc",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/checkbox-checked-dark.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/checkbox-checked.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/checkbox-mixed-dark.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/checkbox-mixed.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/grid-selection-checked-dark.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/grid-selection-checked.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/menuitem-checkbox-checked.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/menuitem-checkbox-mixed.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/menuitem-radio-checked.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/radio-mixed-dark.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/radio-mixed.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/radio-selected-dark.svg",
+		"/home/kuba/.themes/Numix Daily2/gtk-3.0/assets/radio-selected.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/close_focused_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/close_focused_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/close_unfocused_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/close_unfocused_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/maximize_focused_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/maximize_focused_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/maximize_unfocused_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/maximize_unfocused_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/minimize_focused_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/minimize_focused_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/minimize_unfocused_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/minimize_unfocused_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/progress_bar_fill.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/unmaximize_focused_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/unmaximize_focused_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/unmaximize_unfocused_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/unmaximize_unfocused_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/icons/close_dash_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/icons/close_dash_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/icons/minimize_dash_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/icons/minimize_dash_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/icons/sheet_style_close_focused_prelight.svg",
+		"/home/kuba/.themes/Numix Daily2/unity/icons/sheet_style_close_focused_pressed.svg",
+		"/home/kuba/.themes/Numix Daily2/xfce-notify-4.0/gtkrc",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/close-prelight.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/close-pressed.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/hide-prelight.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/hide-pressed.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/maximize-prelight.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/maximize-pressed.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/maximize-toggled-prelight.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/maximize-toggled-pressed.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/shade-prelight.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/shade-pressed.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/shade-toggled-prelight.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/shade-toggled-pressed.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/stick-prelight.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/stick-pressed.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/stick-toggled-prelight.xpm",
+		"/home/kuba/.themes/Numix Daily2/xfwm4/stick-toggled-pressed.xpm",
+		"/home/kuba/.config/sublime-text-3/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
+		"/home/kuba/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/kuba/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/media/kuba/Kuba/Backup/2015 04 23 Ubuntu/home/kuba/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/kuba/temp/untitled.css"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"*.js",
+			".js",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"encode_value",
+			"encode",
+			"no_html",
+			"root",
+			"mode",
+			"SealiousApp",
+			"80",
+			"console",
+			"supposed_resource_id",
+			"resourcerepresentation",
+			"console",
+			"console.log",
+			"złapałem",
+			"validate_declaration",
+			"console",
+			"require(\"Set",
+			"require(\"ip\"",
+			"require(\"open\"",
+			"\"open\"",
+			"does not exist",
+			"#d64937",
+			"rgb ",
+			"272822"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#669FB1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "gamuter.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fieldtype.js",
+				"Sealious/lib/chip-types/field-type.js"
+			],
+			[
+				"fieldco",
+				"sealious-base-chips/define/field_type.color.js"
+			],
+			[
+				"color",
+				"Sealious/node_modules/winston/examples/color-message.js"
+			],
+			[
+				"resman",
+				"Sealious/lib/chip-types/resource-manager.js"
+			],
+			[
+				"core",
+				"Sealious/lib/core.js"
+			],
+			[
+				"resty",
+				"Sealious/lib/chip-types/resource-type.js"
+			],
+			[
+				"disdis",
+				"Sealious/lib/dispatchers/dispatcher-distributed.js"
+			],
+			[
+				"fieltex",
+				"sealious-base-chips/define/field_type.text.js"
+			],
+			[
+				"main",
+				"Sealious/main.js"
+			],
+			[
+				"sowa",
+				"Sealious/node_modules/winston/node_modules/pkginfo/examples/object-argument.js"
+			],
+			[
+				"fieldcolor",
+				"sealious-base-chips/define/field_type.color.js"
+			],
+			[
+				"fiere",
+				"sealious-base-chips/define/field_type.reference.js"
+			],
+			[
+				"inde.htm",
+				"sealious-example-app/public/index.html"
+			],
+			[
+				"index.j",
+				"Sealious/node_modules/mocha/index.js"
+			],
+			[
+				"reference",
+				"sealious-base-chips/define/field_type.reference.js"
+			],
+			[
+				"datamon",
+				"sealious-base-chips/define/datastore.mongo.js"
+			],
+			[
+				"channelwwwser",
+				"sealious-base-chips/define/channel.www_server.js"
+			],
+			[
+				"res",
+				"Sealious/lib/chip-types/resource-type.js"
+			],
+			[
+				"chip",
+				"Sealious/lib/chip-types/chip.js"
+			],
+			[
+				"chipmana",
+				"Sealious/lib/chip-types/chip-manager.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 435.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sowa",
+				"~/Projekty/SOWa/SOWa.sublime-project"
+			],
+			[
+				"sow",
+				"~/Projekty/SOWa/SOWa.sublime-project"
+			],
+			[
+				"SOW",
+				"~/Projekty/SOWa/SOWa.sublime-project"
+			],
+			[
+				"sO",
+				"~/Projekty/SOWa/SOWa.sublime-project"
+			],
+			[
+				"so",
+				"~/Projekty/SOWa/SOWa.sublime-project"
+			],
+			[
+				"sealious",
+				"~/Projekty/Sealious-dev/Sealious.sublime-project"
+			],
+			[
+				"",
+				"~/Projekty/alfred/alfred.sublime-project"
+			],
+			[
+				"al",
+				"~/Projekty/alfred/alfred.sublime-project"
+			]
+		],
+		"width": 331.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

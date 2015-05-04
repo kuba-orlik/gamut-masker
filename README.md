@@ -4,7 +4,7 @@ Gamut masking is a process of limiting the amount of hues to a predefined set, u
 #Live demo
 See it in action [here](//groovy354.github.io/gamut-masker)
 
-#Example
+#Examples
 ![example1](./img/example1.png)
 ![example3](./img/example3.png)
 ![example4](./img/example4.png)

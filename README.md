@@ -6,5 +6,6 @@ See it in action [here](//groovy354.github.io/gamut-masker)
 
 #Example
 ![example1](./img/example1.png)
+![example3](./img/example3.png)
+![example4](./img/example4.png)
 ![example2](./img/example2.png)
-![example32](./img/example3.png)
